@@ -206,6 +206,7 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.2)
+  factory_girl
   factory_girl_rails
   haml
   jbuilder (~> 2.5)

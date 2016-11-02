@@ -13,6 +13,7 @@ gem 'capybara'
 gem 'haml'
 gem 'simple_form'
 gem "paperclip", "~> 5.0.0"
+gem 'factory_girl'
 
 
 group :development, :test do
