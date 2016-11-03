@@ -36,12 +36,11 @@ class PostsController < ApplicationController
   end
   
   def destroy
-    if @post.destroy
-      flash[:success] = 'Problem solved!  Post deleted.'
-      redirect_to root_path
-    else
-      flash[:alert] = 'There was a problem deleting your post.'
-    end
+    puts "DESTROY FunctiON CALLED ###############################"
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:success] = 'Problem solved!  Post deleted.'
+    redirect_to posts_path
   end
 
   def show
@@ -50,7 +49,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:caption, :image)
+    params.require(:post).permit(:image, :caption)
   end
   
   def set_post
