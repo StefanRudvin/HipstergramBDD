@@ -36,7 +36,6 @@ class PostsController < ApplicationController
   end
   
   def destroy
-    puts "DESTROY FunctiON CALLED ###############################"
     @post = Post.find(params[:id])
     @post.destroy
     flash[:success] = 'Problem solved!  Post deleted.'
