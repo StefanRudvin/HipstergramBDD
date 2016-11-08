@@ -3,6 +3,7 @@ require 'rails_helper.rb'
 feature 'User Authentication - ' do  
   before do
     user = create(:user)
+    visit '/'
   end
   
   scenario 'Log in user from index' do
