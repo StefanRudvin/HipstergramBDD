@@ -27,14 +27,14 @@ feature 'Editing posts - ' do
     expect(page).to have_content("Oh god, you weren't meant to see this picture!")
   end
   
-  scenario 'cannot edi a post as another user' do
+  scenario 'cannot edit a post as another user' do
     find(:xpath, "//a[contains(@href,'posts/2')]").click
     expect(page).to_not have_content('Edit Post')
   end
   
   scenario 'cannot edit a post as another user' do
     visit "/posts/2/edit"
-    
+    expect(page.current_path).to eq root_path
     expect(page).to_not have_content('Update Post')
   end
   
