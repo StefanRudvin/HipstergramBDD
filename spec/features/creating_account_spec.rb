@@ -1,6 +1,6 @@
 require 'rails_helper.rb'
 
-feature 'Creating a new user' do
+feature 'Creating a new user- ' do
   before do
     # Visit the home page
     # Click the 'Register' link
@@ -17,7 +17,7 @@ feature 'Creating a new user' do
     expect(page).to have_content('Welcome! You have signed up successfully.')
   end
   
-  xscenario 'requires a user name to be more than 4 characters' do
+  scenario 'requires a user name to be more than 4 characters' do
     fill_in 'User name', with: 'h'
     fill_in 'Email', with: 'sxyrailsdev@myspace.com'
     fill_in 'Password', with: 'supersecret', match: :first
@@ -27,7 +27,7 @@ feature 'Creating a new user' do
     expect(page).to have_content('minimum is 4 characters')
   end
   
-  xscenario 'requires a user name to be less than 12 characters' do
+  scenario 'requires a user name to be less than 12 characters' do
     fill_in 'User name', with: 'h' * 13
     fill_in 'Email', with: 'sxyrailsdev@myspace.com'
     fill_in 'Password', with: 'supersecret', match: :first
@@ -37,7 +37,7 @@ feature 'Creating a new user' do
     expect(page).to have_content("maximum is 12 characters")
   end
   
-  xscenario 'requires a user name to successfully create an account' do
+  scenario 'requires a user name to successfully create an account' do
     fill_in 'Email', with: 'sxyrailsdev@myspace.com'
     fill_in 'Password', with: 'supersecret', match: :first
     fill_in 'Password confirmation', with: 'supersecret'
