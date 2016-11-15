@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]  
   before_action :authenticate_user!
   before_action :owned_post, only: [:edit, :update, :destroy] 
+  before_action :loggedin
   
   def index
     @posts = Post.all
@@ -47,6 +48,10 @@ class PostsController < ApplicationController
   end
 
   private
+  
+  def loggedin
+    @loggedin = current_user
+  end
   
   def post_params
     params.require(:post).permit(:image, :caption)
