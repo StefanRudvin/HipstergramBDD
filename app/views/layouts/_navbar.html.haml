@@ -9,7 +9,7 @@
     .collapse.navbar-collapse#bs-navbar-collapse-1
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
-          %li
+          -# %li
             = link_to @loggedin.user_name
           %li
             = link_to "New Post", new_post_path
