@@ -12,6 +12,8 @@
           -# %li
             = link_to @loggedin.user_name
           %li
+            = link_to "Discover", browse_posts_path
+          %li
             = link_to "New Post", new_post_path
           %li
             = link_to "Logout", destroy_user_session_path, method: :delete
