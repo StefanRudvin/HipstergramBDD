@@ -2,7 +2,7 @@ require 'rails_helper.rb'
 
 
 feature 'editing user profiles' do
-  background do
+  before do
     user = create :user
     user_two = create(:user, id: 2,
                              email: 'hi@hi.com',

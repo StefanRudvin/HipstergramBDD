@@ -1,9 +1,18 @@
 class PostsController < ApplicationController
 
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :like]
   before_action :authenticate_user!
   before_action :owned_post, only: [:edit, :update, :destroy]
   before_action :loggedin
+
+  def like
+  if @post.liked_by current_user
+      respond_to do |format|
+        format.html { redirect_to :back }
+        format.js
+      end
+    end
+  end
 
   def index
     @posts = Post.all.order('created_at DESC').page params[:page]
