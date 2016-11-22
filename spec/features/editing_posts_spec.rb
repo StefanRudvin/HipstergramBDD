@@ -20,7 +20,7 @@ feature 'Editing posts - ' do
     expect(page).to have_content('Edit Post')
 
     click_link 'Edit Post'
-    fill_in 'Caption', with: "Oh god, you weren't meant to see this picture!"
+    fill_in 'post[caption]', with: "Oh god, you weren't meant to see this picture!"
     click_button 'Update Post'
 
     expect(page).to have_content('Post updated hombre')
@@ -41,7 +41,7 @@ feature 'Editing posts - ' do
   it "won't update a post without an image" do
     find(:xpath, "//a[contains(@href,'posts/1')]", match: :first).click
     click_link 'Edit Post'
-    attach_file('Image', 'spec/files/coffee.zip')
+    attach_file('post[image]', 'spec/files/coffee.zip')
     click_button 'Update Post'
 
     expect(page).to have_content('Something is wrong with your form!')
