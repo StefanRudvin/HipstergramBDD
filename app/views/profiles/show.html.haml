@@ -27,7 +27,12 @@
       %p.profile-bio
         = @user.bio
       .user-statistics
-        %p
-          = pluralize @user.posts.count, 'post'
+        .list-inline.list-unstyled
+          %li
+            = pluralize @user.posts.count, 'posts'
+          %li
+            = pluralize @user.followers.count, 'followers'
+          %li
+            = pluralize @user.following.count, 'following'
 -@posts.each do |post|
   = render 'posts/post', post: post
