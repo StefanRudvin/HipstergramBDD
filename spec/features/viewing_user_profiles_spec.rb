@@ -12,15 +12,15 @@ feature 'viewing user profiles' do
     sign_in_with user
 
     visit '/'
-    first('.user-name').click_link 'Arnie'
+    first('.user-name').click_link 'bigrigoz', match: :first
   end
 
   scenario 'visiting a profile page shows the user name in the url' do
-    expect(page.current_path).to eq(profile_path('Arnie'))
+    expect(page.current_path).to eq(profile_path('bigrigoz'))
   end
 
   scenario "a profile page only shows the specified user's posts" do
-    expect(page).to have_content 'nofilter'
-    expect(page).to_not have_content 'different post yo'
+    expect(page).to_not have_content 'nofilter'
+    expect(page).to have_content 'different post yo'
   end
 end

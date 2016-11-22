@@ -16,19 +16,19 @@ feature 'editing user profiles' do
   end
 
   scenario 'a user can change their own profile details' do
-    click_link 'Arnie'
+    click_link 'YEAHMAN', match: :first
     click_link 'Edit Profile'
-    attach_file('user_avatar', 'spec/files/images/avatar.jpg')
+    attach_file('user_avatar', 'spec/files/images/coffee.jpg')
     fill_in 'user_bio', with: 'Is this real life?'
-    click_button 'Update Profile'
+    click_button 'Update Profile', match: :first
 
-    expect(page.current_path).to eq(profile_path('Arnie'))
+    expect(page.current_path).to eq(profile_path('YEAHMAN'))
     expect(page).to have_css("img[src*='avatar']")
     expect(page).to have_content('Is this real life?')
   end
 
   scenario "a user cannot see an Edit Profile button on another users profile" do
-    click_link 'bigrigoz'
+    click_link 'bigrigoz', match: :first
 
     expect(page).to_not have_content('Edit Profile')
   end
