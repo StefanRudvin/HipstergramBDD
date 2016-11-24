@@ -19,12 +19,11 @@
         .container-fluid
           .form-group.text-center
             = form_tag(new_post_path, :method => "get", id: "seach-form", :multipart => true) do
-              = text_field_tag :search, params[:search], placeholder: "Search for RSIDs"
+              = text_field_tag :search, params[:search], placeholder: "Search for Images"
               / search area
-              .form-group.text-center
-                = submit_tag "Search", class: "btn-success btn-block", :name => nil
-          = image_tag "/assets/llama.jpg"
-          = image_tag "/assets/1.png"
+          .form-group.text-center
+            = submit_tag "Search", class: "btn-success btn-block"
+
           .form-group.text-center
             - if (@finalImgs != nil) then
               %table.table

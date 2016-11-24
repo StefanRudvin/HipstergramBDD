@@ -53,6 +53,7 @@ class PostsController < ApplicationController
     def getUrls(search)
       @final = []
       numberArray = [1,5,7,13,17,19,21]
+      #numberArray = [1,5]
       @htmlpage = getHTML(search)
       numberArray.each do |x|
         @imgcluster = @htmlpage.split(/srcset="(.*?)">/)[x]
@@ -64,26 +65,27 @@ class PostsController < ApplicationController
     end
 
     def uploadImages(search)
+
       urlstxt = "./app/assets/urls.txt"
       File.open(urlstxt, "a+") { |file| file.puts("Search term: " + search.to_s + " - by user: " + @loggedin.to_s + " at " + Date.today.to_s)}
-      baseLocation = './app/assets/'
+      baseLocation = './app/assets/images/'
       urls = getUrls(search)
       counter = 1
       finalLocations = []
       urls.each do |url|
         finalLocation = baseLocation + counter.to_s + '.jpg'
-        imgLocation = "/assets/" + counter.to_s + '.jpg'
+        imgLocation = "/assets/" + counter.to_s
         url = url.to_s
         File.open(urlstxt, "a+") { |file| file.puts(url)}
-        require 'open-uri'
+
         open(finalLocation.to_s, 'wb') do |file|
           file << open(url).read
         end
+
         finalLocations += [imgLocation]
         counter += 1
       end
       return finalLocations
-      puts finalLocations
     end
 
     if params[:search].present?
@@ -147,3 +149,8 @@ class PostsController < ApplicationController
   end
 
 end
+
+
+        #agent = Mechanize.new
+        #link = 'https://cdn.pixabay.com/photo/2015/05/22/05/52/cat-778315_1280.jpg'
+        #agent.get(link).save finalLocation
