@@ -52,7 +52,7 @@ class PostsController < ApplicationController
 
     def getUrls(search)
       @final = []
-      numberArray = [1,5,7,13,17,19,21]
+      numberArray = [1,5,7,13,17,19]
       #numberArray = [1,5]
       @htmlpage = getHTML(search)
       numberArray.each do |x|
@@ -89,6 +89,7 @@ class PostsController < ApplicationController
     end
 
     if params[:search].present?
+      @counter = [0,1,2,3,4,5]
       @search = params[:search]
       @finalUrls = getUrls(@search)
       @finalImgs = uploadImages(@search)

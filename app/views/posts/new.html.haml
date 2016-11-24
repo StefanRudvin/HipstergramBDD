@@ -11,6 +11,12 @@
             .form-group.text-center
               %h4 Upload an image:
               = f.input :image, label: false, input_html: { onChange: 'loadFile(event)' }
+
+              /= f.input :username, :image_tag '/assets/1.jpg'
+
+              /%h4 Need this as f.input
+              /= image_tag '/assets/1.jpg', width: '200'
+
             .form-group.text-center
               = f.input :caption, label: false, placeholder: 'Add your caption'
             .form-group.text-center
@@ -19,19 +25,14 @@
         .container-fluid
           .form-group.text-center
             = form_tag(new_post_path, :method => "get", id: "seach-form", :multipart => true) do
-              = text_field_tag :search, params[:search], placeholder: "Search for Images"
+              = text_field_tag :search, params[:search], placeholder: "E.g. dog"
               / search area
           .form-group.text-center
-            = submit_tag "Search", class: "btn-success btn-block"
-
-          .form-group.text-center
-            - if (@finalImgs != nil) then
-              %table.table
-                - @finalImgs.each do |x|
-                  %tr
-                    = image_tag x
-            - if (@finalUrls != nil) then
-              %table.table
-                - @finalUrls.each do |x|
-                  %tr
-                    %td= x
+            = submit_tag "Search Images", class: "btn-success btn-block"
+      .form-group.text-center
+        /finalImgs = local path
+        /finalUrl = Image URL
+        - if (@finalImgs != nil) then
+          - if (@finalUrls != nil) then
+            - @counter.each do |x|
+              = link_to image_tag(@finalImgs[x], width: '200'), @finalUrls[x]
