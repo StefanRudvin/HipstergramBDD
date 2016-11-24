@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  require 'open-uri'
+
   before_action :set_post, only: [:show, :edit, :update, :destroy, :like, :unlike]
   before_action :authenticate_user!
   before_action :owned_post, only: [:edit, :update, :destroy]
@@ -41,7 +43,6 @@ class PostsController < ApplicationController
       base1 = "https://pixabay.com/en/photos/?q="
       base2 = "&image_type=&cat=&min_width=&min_height="
       @full_url = base1 + search + base2
-
       @html = Nokogiri::HTML(open(@full_url)) do |config|
         config.strict.nonet
       end
@@ -49,23 +50,47 @@ class PostsController < ApplicationController
       return @html
     end
 
-    def parse()
+    def getUrls(search)
       @final = []
-      numberArray = [1,5,7,13,17,19]
-      @htmlpage = getHTML("cat")
+      numberArray = [1,5,7,13,17,19,21]
+      @htmlpage = getHTML(search)
       numberArray.each do |x|
-        puts x
         @imgcluster = @htmlpage.split(/srcset="(.*?)">/)[x]
         i = @imgcluster.index(", ")
         j = @imgcluster.index(" 2x")
-        @final += [@imgcluster[i+1..j-1]]
+        @final += [@imgcluster[i+2..j-1]]
       end
-
       return @final
-
     end
 
-    @finalArray = parse()
+    def uploadImages(search)
+      urlstxt = "./app/assets/urls.txt"
+      File.open(urlstxt, "a+") { |file| file.puts("Search term: " + search.to_s + " - by user: " + @loggedin.to_s + " at " + Date.today.to_s)}
+      baseLocation = './app/assets/'
+      urls = getUrls(search)
+      counter = 1
+      finalLocations = []
+      urls.each do |url|
+        finalLocation = baseLocation + counter.to_s + '.jpg'
+        imgLocation = "/assets/" + counter.to_s + '.jpg'
+        url = url.to_s
+        File.open(urlstxt, "a+") { |file| file.puts(url)}
+        require 'open-uri'
+        open(finalLocation.to_s, 'wb') do |file|
+          file << open(url).read
+        end
+        finalLocations += [imgLocation]
+        counter += 1
+      end
+      return finalLocations
+      puts finalLocations
+    end
+
+    if params[:search].present?
+      @search = params[:search]
+      @finalUrls = getUrls(@search)
+      @finalImgs = uploadImages(@search)
+    end
 
   end
 

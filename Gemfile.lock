@@ -248,6 +248,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_votable (~> 0.10.0)
+  addressable
   bootstrap-sass (~> 3.3.6)
   byebug
   capybara

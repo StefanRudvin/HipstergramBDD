@@ -15,10 +15,24 @@
               = f.input :caption, label: false, placeholder: 'Add your caption'
             .form-group.text-center
               = f.button :submit, class: 'btn-success btn-block'
-              - if (@finalArray != nil) then
-                / Show table only if is search is done
-                %table.table
-                  - @finalArray.each do |x|
-                    %tr
-                      %td= x
-              = @finalArray
+
+        .container-fluid
+          .form-group.text-center
+            = form_tag(new_post_path, :method => "get", id: "seach-form", :multipart => true) do
+              = text_field_tag :search, params[:search], placeholder: "Search for RSIDs"
+              / search area
+              .form-group.text-center
+                = submit_tag "Search", class: "btn-success btn-block", :name => nil
+          = image_tag "/assets/llama.jpg"
+          = image_tag "/assets/1.png"
+          .form-group.text-center
+            - if (@finalImgs != nil) then
+              %table.table
+                - @finalImgs.each do |x|
+                  %tr
+                    = image_tag x
+            - if (@finalUrls != nil) then
+              %table.table
+                - @finalUrls.each do |x|
+                  %tr
+                    %td= x
