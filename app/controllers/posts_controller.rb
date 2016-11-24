@@ -36,6 +36,37 @@ class PostsController < ApplicationController
 
   def new
     @post = current_user.posts.build
+
+    def getHTML(search)
+      base1 = "https://pixabay.com/en/photos/?q="
+      base2 = "&image_type=&cat=&min_width=&min_height="
+      @full_url = base1 + search + base2
+
+      @html = Nokogiri::HTML(open(@full_url)) do |config|
+        config.strict.nonet
+      end
+      @html = @html.to_s
+      return @html
+    end
+
+    def parse()
+      @final = []
+      numberArray = [1,5,7,13,17,19]
+      @htmlpage = getHTML("cat")
+      numberArray.each do |x|
+        puts x
+        @imgcluster = @htmlpage.split(/srcset="(.*?)">/)[x]
+        i = @imgcluster.index(", ")
+        j = @imgcluster.index(" 2x")
+        @final += [@imgcluster[i+1..j-1]]
+      end
+
+      return @final
+
+    end
+
+    @finalArray = parse()
+
   end
 
   def create
