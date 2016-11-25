@@ -10,19 +10,19 @@
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li
-            = link_to "Admin", rails_admin_path
+            = link_to t('admin'), rails_admin_path
           %li
-            = link_to "Feed", root_path
+            = link_to t('feed'), root_path
           %li
-            = link_to "Profile", profile_path(current_user.user_name)
+            = link_to t('profile'), profile_path(current_user.user_name)
           %li
-            = link_to "Discover", browse_posts_path
+            = link_to t('discover'), browse_posts_path
           %li
-            = link_to "New Post", new_post_path
+            = link_to t('newpost'), new_post_path
           %li
-            = link_to "Logout", destroy_user_session_path, method: :delete
+            = link_to t('logout'), destroy_user_session_path, method: :delete
         - else
           %li
-            = link_to "Login", new_user_session_path
+            = link_to t('login'), new_user_session_path
           %li
-            = link_to "Register", new_user_registration_path
+            = link_to t('register'), new_user_registration_path

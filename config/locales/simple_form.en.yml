@@ -29,3 +29,25 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+fi:
+  simple_form:
+    "yes": 'Kyllä'
+    "no": 'Ei'
+    required:
+      text: 'Tarvitaan'
+      mark: '*'
+    error_notification:
+      default_message: "Olkaa hyvä ja korjatkaa alla olevat ongelmat:"
+    # Examples
+    labels:
+      defaults:
+        password: 'Salasana'
+        user:
+          new:
+            email: 'Sähköposti.'
+          edit:
+            email: 'Sähköposti.'
+    hints:
+      defaults:
+        username: 'Sisäänkirjautumistunnus.'
+        password: 'Ei erikoisia kirjaimia, kiitos.'

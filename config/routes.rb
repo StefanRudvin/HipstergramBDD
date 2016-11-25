@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :admins
+
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
@@ -20,12 +20,17 @@ Rails.application.routes.draw do
 
   get 'browse', to: 'posts#browse', as: :browse_posts
 
-  devise_for :users, :controllers => { registrations: 'registrations' }
+  localized do
+    devise_for :users, :controllers => { registrations: 'registrations' }
+    devise_for :admins
+    root 'posts#index'
+  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get ':user_name', to: 'profiles#show', as: :profile
 
-  root 'posts#index'
+
 
   # New route underneath
   get ':user_name/edit', to: 'profiles#edit', as: :edit_profile
