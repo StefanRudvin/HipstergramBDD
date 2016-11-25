@@ -24,6 +24,7 @@ gem 'rails_admin', '~> 1.0'
 gem 'nokogiri'
 gem 'addressable'
 gem 'mechanize'
+gem 'image-picker-rails'
 gem 'route_translator'
 
 group :development, :test do
