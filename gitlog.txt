@@ -1,0 +1,228 @@
+commit 5647e052e3bc8fceb1b7f9c980710e9d4986bf5e
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Fri Nov 25 18:38:53 2016 +0000
+
+    More setup
+
+commit 70ef97e238d16dbd05ef79fe63983f88c7bf7b6e
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Fri Nov 25 18:27:04 2016 +0000
+
+    Setting up for heroku
+
+commit f1fb0f8f657a1bdca35343279d6adf4f1d0f366c
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Fri Nov 25 15:34:14 2016 +0000
+
+    Internationalization works
+
+commit 3579afc186038b7b86779438acff3c9722bad7e6
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Fri Nov 25 12:27:45 2016 +0000
+
+    Pushing to Heroku
+
+commit 3bbef2c9211b8ecc01ec404b3c142a6e9b2f6a1e
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Thu Nov 24 18:24:17 2016 +0000
+
+    Images clickable with correct URL
+
+commit 8824d3502a0ad99b96b1dfadda20185df84f1954
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Thu Nov 24 14:37:54 2016 +0000
+
+    Images load
+
+commit f7a7326647323002e80ce8a923902ef63e9432e8
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Thu Nov 24 04:56:07 2016 +0000
+
+    Images fetched, but problem in showing them in view
+
+commit a8fd350e96db9cb7a8e187d535b366f75a831a6d
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Thu Nov 24 00:50:16 2016 +0000
+
+    Image URL fetch works
+
+commit 06cf63e47d136d4cf9fe2917988c6eaf36c816f7
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Tue Nov 22 16:51:58 2016 +0000
+
+    User following AJAX works
+
+commit 50c9f6252d44f5dbd14636b95618744612388277
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Tue Nov 22 16:28:59 2016 +0000
+
+    Finalised browse, following users. Ajax on follow still does not work
+
+commit 2d88f6f50574d38be002e8862e13d751a54ed27c
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Tue Nov 22 03:58:59 2016 +0000
+
+    All tests passing
+
+commit faa4fe72dcad822b87d7fdf3b460b40587ca714f
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Tue Nov 22 03:39:27 2016 +0000
+
+    Passing tests
+
+commit f8930a12113cafcdc76034b2b281eccb9aafa07a
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Tue Nov 22 02:55:27 2016 +0000
+
+    Ajax for likes works
+
+commit 43e7862fd1d79700092cc06289a3022e60ae2e45
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Tue Nov 22 02:49:06 2016 +0000
+
+    Testing Ajax
+
+commit d855d23e8ae76331479d69799bf3e4f8321e3e9f
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Tue Nov 22 02:15:57 2016 +0000
+
+    Can like photo without ajax
+
+commit ea2368cb5211b0228ee4140ce8a81c0b03a6ade8
+Merge: 84201fc 5a3c2f9
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Mon Nov 21 01:29:31 2016 +0000
+
+    Merged userprofile into master
+
+commit 5a3c2f9d6b6779d11fc314cf4a13faf44567e404
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Mon Nov 21 01:28:36 2016 +0000
+
+    Profile edit works with links
+
+commit 6a1d8fa8b6f325c135037be0e95b6c92b8d4fe6d
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Mon Nov 21 01:12:29 2016 +0000
+
+    Profile page works with edit
+
+commit 84201fc297ac5eaa3453048eeaa17515066c4fe7
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Mon Nov 21 00:33:42 2016 +0000
+
+    User profile pages
+
+commit fcf6ac67c40e02a58b71c346b29864c361b28447
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Sun Nov 20 22:15:40 2016 +0000
+
+    Kaminari works
+
+commit cfece0745f5a1f7a83d21a2073cc0910deeb4b01
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Wed Nov 16 00:52:14 2016 +0000
+
+    Just added kaminari
+
+commit 85eb59ce2f34fbcae84a78e62daed364bdabbe79
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Tue Nov 15 16:39:58 2016 +0000
+
+    Finished Ajax and second part completely
+
+commit b01fd8cbb650863fd57ffa9472a8e72ccca1fb3e
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Tue Nov 15 16:01:01 2016 +0000
+
+    Finalizing Part 2 - Ajax almost works
+
+commit 11614d8676a9b4927aff1f9805c62dfca838c074
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Mon Nov 14 20:04:12 2016 +0000
+
+    Problem with delete comment test. Otherwise OK
+
+commit 21baecb626577b56f4edc8843d96c7e45df4c479
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Mon Nov 14 14:50:52 2016 +0000
+
+    Passed all tests, now moving to user validation
+
+commit a5104bf971d2462c0992226f2d6613215d9bbcec
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Tue Nov 8 17:22:27 2016 +0000
+
+    Rarefactored user sign in in rails_helper.rb
+
+commit 59dd3b0b9b5e86d1b3fdb681c1d35bc495543a93
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Tue Nov 8 16:55:05 2016 +0000
+
+    User authentication works, validation still incomplete
+
+commit 3caae040178fc4aa857afa69755bfa910b7c6c37
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Thu Nov 3 17:19:24 2016 +0000
+
+    Create user with devise test pass
+
+commit 1753b092efda421a37612c43679478a30bc3aea2
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Thu Nov 3 16:32:32 2016 +0000
+
+    Bootstrap added, delete function does not work
+
+commit 0abeb23cdb510e2c8a5adb927511be7f6fa801a1
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Thu Nov 3 15:51:54 2016 +0000
+
+    Can delete posts test complete
+
+commit 68464418031a81999b8898a2d6db40ddd58e30bb
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Thu Nov 3 15:41:31 2016 +0000
+
+    Won't update post with an invalid image
+
+commit 049aadee7a2f80cb326d9ed6e46d8d08fb5c3a37
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Thu Nov 3 15:22:57 2016 +0000
+
+    Passed edit test
+
+commit 4f27d923209d4d188291f45ee4f61190cbd0a3fb
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Wed Nov 2 14:25:59 2016 +0000
+
+    Passed post creation tests
+
+commit d6d6b3efb1925b4eeb6fd6cb6aca0a8acfa5a89d
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Wed Nov 2 14:02:11 2016 +0000
+
+    Passed image verification test
+
+commit 87367091b571faf75c61fca079ab688917ea9cde
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Wed Nov 2 13:53:43 2016 +0000
+
+    Passed post creation test
+
+commit 626870c8635e46b4f9af25f19dce14c420baa5f3
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Wed Nov 2 13:31:41 2016 +0000
+
+    Moving to C9
+
+commit 0ee7133998ee0a8ca7a22e6f2d9b96b434b6884d
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Tue Nov 1 16:20:39 2016 +0000
+
+    Paperclip done, modified post controller with new methods
+
+commit 6cb24823161b01fbc244030ab83465398ebc88b7
+Author: Stefan Rudvin <Stefan.rudvin@hotmail.com>
+Date:   Thu Oct 27 13:24:10 2016 +0100
+
+    Initial commit for TDD photogram app
