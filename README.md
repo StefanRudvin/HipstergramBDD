@@ -1,24 +1,29 @@
-# README
+# Ruby on Rails HipsterGram
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+InstaGram clone. See this app live at: https://stefangram.herokuapp.com/
 
-Things you may want to cover:
+To get started with the app, clone the repo and then install the needed gems:
 
-* Ruby version
+```
+$ bundle install --without production
+```
 
-* System dependencies
+Next, migrate the database:
 
-* Configuration
+```
+$ rails db:migrate
+```
 
-* Database creation
+Finally, run the test suite to verify that everything is working correctly:
 
-* Database initialization
+```
+$ rspec
+```
+Note: there are some issues with the test syntaxes and depreciation, but technically all the tests pass.
+If the test suite passes, you'll be ready to run the app in a local server:
 
-* How to run the test suite
+```
+$ rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![HipsterGram](https://raw.githubusercontent.com/StefanRudvin/HipstergramBDD/master/Photogram.png)
