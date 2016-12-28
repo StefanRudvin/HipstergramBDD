@@ -580,3 +580,10 @@ https://cdn.pixabay.com/photo/2015/04/17/09/36/domestic-cat-726989__480.jpg
 https://cdn.pixabay.com/photo/2013/07/31/12/25/cat-169095__480.jpg
 https://cdn.pixabay.com/photo/2016/09/07/22/38/cat-1652822__480.jpg
 https://cdn.pixabay.com/photo/2016/11/09/20/43/cat-1812668__480.jpg
+Search term: dog - by user: #<User:0x007fcc746281b0> at 2016-11-25
+https://cdn.pixabay.com/photo/2014/03/05/19/23/dog-280332__480.jpg
+https://cdn.pixabay.com/photo/2013/11/23/02/17/dog-216282__480.jpg
+https://cdn.pixabay.com/photo/2014/04/10/10/27/yorkshire-terrier-320833__480.jpg
+https://cdn.pixabay.com/photo/2015/12/10/11/42/dog-1086286__480.jpg
+https://cdn.pixabay.com/photo/2014/03/14/20/13/dog-287420__480.jpg
+https://cdn.pixabay.com/photo/2015/04/10/00/47/dog-715545__480.jpg
