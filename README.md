@@ -2,6 +2,8 @@
 
 InstaGram clone. See this app live at: https://stefangram.herokuapp.com/
 
+Imagemagick local dependency required.
+
 To get started with the app, clone the repo and then install the needed gems:
 
 ```
@@ -14,16 +16,16 @@ Next, migrate the database:
 $ rails db:migrate
 ```
 
-Finally, run the test suite to verify that everything is working correctly:
-
-```
-$ rspec
-```
-Note: there are some issues with the test syntaxes and depreciation, but technically all the tests pass.
-If the test suite passes, you'll be ready to run the app in a local server:
+Then you can run the application locally
 
 ```
 $ rails server
+```
+
+Test suite
+
+```
+$ rspec
 ```
 
 ![HipsterGram](https://raw.githubusercontent.com/StefanRudvin/HipstergramBDD/master/Photogram.png)

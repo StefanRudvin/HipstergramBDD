@@ -7,6 +7,12 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore pstorm
+/.idea/
+
+# Ignore user images
+/public/system/posts/images/
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
